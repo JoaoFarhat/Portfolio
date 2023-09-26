@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header style="background-image: url('../images/background.JPG');">
+        <div class="menu">
+
+            <nav>
+                <h1><span th:text="${logo}"></span></h1>
+                
+                <ul class="links">
+                    <a href="">Home</a>
+                    <a href="#sobre">Sobre Mim</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#cursos">Estudos</a>
+                    <a href="#contatos">Contatos</a>
+                </ul>
+            </nav>
+            <section class="inicio">
+                <section class="textoInicio">
+                    <h1 th:text="${nome}"></h1>
+                    <h1><span th:text="${sobrenome}"></span></h1>
+                    <p th:text="${resumo}"></p>
+                    <p th:text="${profissao}"></p>
+                </section>
+            </section>
+        </div>
+    </header>
+
+    <section class="sobre" id="sobre">
+        <div class="sobre-mim">
+            <div class="texto-sobre">
+                <h3>Sobre <span>Mim</span></h3>
+                <p th:text="${sobre1}"></p>
+                <p th:text="${sobre2}"></p>
+                <p th:text="${sobre3}"></p>
+                <p th:text="${sobre4}"></p>
+
+            </div>
+            <div class="img-sobre">
+                <img src="../images/imagem.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="habilidades" id="habilidades">
+        <h2 class="hab">Minhas <span> Habilidades </span></h2>
+
+        <div class="container-hab">
+            <div class="coluna-hab">
+                <h3 class="titulo">Programação</h3>
+
+                <div class="box1">
+                    <div class="conteudo">
+                        <div class="progresso">
+                            <h3>
+                                <h3 th:text ="${html}" th:remove="tag"></h3>
+                                <span th:text = "${htmlP}"></span>
+                            </h3>
+                            
+                            <div class="barra"><span></span></div>
+                        </div>
+                        
+                        <div class="progresso">
+                            <h3>
+                                <h3 th:text ="${java}" th:remove="tag"></h3>
+                                <span th:text = "${javaP}"></span>
+                            </h3>
+                            <div class="barra"><span></span></div>
+                        </div>
+
+                        <div class="progresso">
+                            <h3>
+                                <h3 th:text ="${sql}" th:remove="tag"></h3>
+                                <span th:text = "${sqlP}"></span>
+                            </h3>
+                            <div class="barra"><span></span></div>
+                        </div>
+
+                        <div class="progresso">
+                            <h3>
+                                <h3 th:text ="${ios}" th:remove="tag"></h3>
+                                <span th:text = "${iosP}"></span>
+                            </h3>
+                            <div class="barra"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coluna-hab">
+                <h3 class="titulo">Linguagens</h3>
+
+                <div class="box1">
+                    <div class="conteudo">
+                        <div class="progresso">
+                            <h3>
+                                <h3 th:text ="${ing}" th:remove="tag"></h3>
+                                <span th:text = "${ingP}"></span>
+                            </h3>
+                            <div class="barra"><span></span></div>
+                        </div>
+                        <div class="progresso">
+                            <h3>
+                                <h3 th:text ="${esp}" th:remove="tag"></h3>
+                                <span th:text = "${espP}"></span>
+                            </h3>
+                            <div class="barra"><span></span></div>
+                        </div> 
+                        
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cursos" id="cursos">
+        <h2 class="hab">Rumo a <Span>Programação</Span></h2>
+
+        <div class="container-cursos">
+            <div class="coluna-cursos">
+                <h3 class="titulo-cursos">Cursos</h3>
+
+                <div class="cursos-box">
+                    <div class="conteudo-cursos">
+                        <div class="cont">
+                            <div class="ano">
+                                <i class='bx bxs-calendar bx-sm'></i>
+                                <i th:text ="${etecAno}" th:remove ="tag"></i>
+                            </div>
+                            <h3 th:text ="${etecNome}"></h3>
+                            <p th:text ="${etecResumo}"></p>
+                        </div>
+                    </div>
+
+                    <div class="conteudo-cursos">
+                        <div class="cont">
+                            <div class="ano">
+                                <i class='bx bxs-calendar bx-sm'></i>
+                                <i th:text ="${freiAno}" th:remove ="tag"></i>
+                            </div>
+                            <h3 th:text ="${freiNome}"></h3>
+                            <p th:text ="${freiResumo}"></p>
+                        </div>
+                    </div>
+
+                    <div class="conteudo-cursos">
+                        <div class="cont">
+                            <div class="ano">
+                                <i class='bx bxs-calendar bx-sm'></i>
+                                <i th:text ="${senacAno}" th:remove ="tag"></i>
+                            </div>
+                            <h3 th:text ="${senacNome}"></h3>
+                            <p th:text ="${senacResumo}"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coluna-cursos">
+                <h3 class="titulo-cursos">Experiencias</h3>
+
+                <div class="cursos-box">
+                    <div class="conteudo-cursos">
+                        <div class="cont">
+                            <div class="ano">
+                                <i class='bx bxs-calendar bx-sm'></i>
+                                <i th:text ="${gldsAno}" th:remove ="tag"></i>
+                            </div>
+                            <h3 th:text ="${gldsNome}"></h3>
+                            <p th:text ="${gldsResumo}"></p>
+                        </div>
+                    </div>
+
+                    <div class="conteudo-cursos">
+                        <div class="cont">
+                            <div class="ano">
+                                <i class='bx bxs-calendar bx-sm'></i>
+                                <i th:text ="${malexAno}" th:remove ="tag"></i>
+                            </div>
+                            <h3 th:text ="${malexNome}"></h3>
+                            <p th:text ="${malexResumo}"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contatos">
+        <div class="footer-container">
+            <div class="footer-conteudo">
+                <div class="footer-contato">
+                    <h3><span th:text="${logo}"></span></h3>
+                    <h4 th:text="${profissao}"></h4>
+
+                    <div class="redes-sociais">
+                        <a href="https://www.instagram.com/farhat_joao/" class="footer-link" id="instagram"> <i class='bx bxl-instagram bx-lg' ></i></a>
+                        <a href="https://www.linkedin.com/in/jo%C3%A3o-victor-farhat-calejon-b167661b5/" class="footer-link" id="linkedin"> <i class='bx bxl-linkedin bx-lg' ></i></a>
+                        <a href="https://github.com/JoaoFarhat" class="footer-link" id="github"><i class='bx bxl-github bx-lg' ></i></a>
+                    </div>
+                </div>
+                <div class="footer-contato">
+                    <ul class="footer-lista">
+                        <li>
+                            <h3><span>Linguagens</span></h3>
+                        </li>
+                        <li>
+                            <h4 th:text ="${java}"></h4>
+                        </li>
+                        <li>
+                            <h4 th:text ="${sql}"></h4>
+                        </li>
+                        <li>
+                            <h4 th:text ="${ios}"></h4>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-contato">
+                    <ul class="footer-lista">
+                        <li>
+                            <h3><span>Me Contate</span></h3>
+                        </li>
+                        <li>
+                            <h4 th:text ="${email}"></h4>
+                        </li>
+                        <li>
+                            <h4 th:text ="${telefone}"></h4>
+                        </li>
+                    </ul>
+                </div>  
+        </div>
+    </div>
+    </footer>
+    
+</body>
+</html>
